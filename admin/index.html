@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Dashboard | E-voting System</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS files -->
+    <link href="/css/voter.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="nav-extended">
+      <div class="sp">
+        <div class="nav-wrapper navbar-size">
+          <a href="#" class="brand-logo"><img class="user-image-size" src="/img/logo.png" /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/admin/index.html">
+                <p>Dashboard</p>
+              </a></li>
+            <li><a href="/admin/elections.html">
+                <p>Elections</p>
+              </a></li>
+            <li><a href="/admin/candidates.html">
+                <p>Candidates</p>
+              </a></li>
+            <li><a href="/admin/voters.html">
+                <p>Voters</p>
+              </a></li>
+            <li><a href="/index.html">
+                <p>Logout</p>
+              </a></li>
+            <li><a class="lidin" target="_blank" href="#">Admin</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </nav>  
+    <div class="page-wrapper">
+        <div class="container-xl">
+          <!-- Page title -->
+          <div class="page-header text-white d-print-none">
+            <div class="row align-items-center">
+              <div class="col">
+                <h2 class="page-title">Dashboard</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <d class="row row-deck row-cards">
+              <div class="row">
+                <div class="col s6 m4">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <h4>Running elections.</h4>
+                      <h6>1</h6>
+                    </div>
+                    </div>
+                  </div>
+                <div class="col s6 m4">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <h4>Total Voters</h4>
+                      <h6>4,300</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m4">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <h4>Total Candidates</h4>
+                      <h6>10</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                  <div class="tab">
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">Election results</h3>
+                      </div>
+                    </div>
+                  <table class="highlight">
+                    <thead>
+                      <tr>
+                        <th>Candidate</th>
+                        <th colspan="2">Votes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Robert Downey Jr.</td>
+                        <td>3,550</td>
+                        <td class="w-50">
+                          <div class="progress">
+                            <div class="determinate" style="width: 70%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Chris Evans</td>
+                        <td>1,798</td>
+                        <td class="w-50">
+                          <div class="progress">
+                            <div class="determinate" style="width: 35.96%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Chris Hemsworth</td>
+                        <td>1,245</td>
+                        <td class="w-50">
+                          <div class="progress">
+                            <div class="determinate" style="width: 56.2%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Scarlett Johanssen</td>
+                        <td>986</td>
+                        <td class="w-50">
+                        <div class="progress">
+                          <div class="determinate" style="width: 19.2%"></div>
+                        </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Jeremy Renner</td>
+                        <td>854</td>
+                        <td class="w-50">
+                          <div class="progress">
+                            <div class="determinate" style="width: 17.08%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Mark Ruffalo</td>
+                        <td>650</td>
+                        <td class="w-50">
+                          <div class="progress">
+                            <div class="determinate" style="width: 13%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer footer-transparent d-print-none">
+          <div class="container">Copyright &copy; 2021 E-voting System. All rights reserved.</div>
+        </footer>
+      </div>
+    </div>
+    <!-- Tabler Core -->
+    <script src="/js/tabler.min.js"></script>
+  </body>
+</html>
