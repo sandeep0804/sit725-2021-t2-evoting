@@ -108,6 +108,10 @@ p:hover {
   cursor: pointer;
 }
 
+.cand:hover {
+  background-color: #1565c0;
+}
+
 .tab {
   margin-left: 50vh;
   margin-right: 50vh;
