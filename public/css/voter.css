@@ -57,11 +57,6 @@ nav {
   font-weight: 600;
   cursor: pointer;
 }
-span {
-  text-decoration: none !important;
-  font-weight: 600;
-  color: white !important;
-}
 .elet:hover {
   background-color: #1565c0;
 }
