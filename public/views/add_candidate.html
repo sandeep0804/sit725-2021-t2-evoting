@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Candidates | E-voting System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/voter.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="nav-extended">
+        <div class="sp">
+            <div class="nav-wrapper navbar-size">
+                <a href="#" class="brand-logo"><img class="user-image-size" src="/img/logo.png" /></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/admin/index.html">
+                            <p>Dashboard</p>
+                        </a></li>
+                    <li><a href="/admin/elections.html">
+                            <p>Elections</p>
+                        </a></li>
+                    <li><a href="/admin/candidates.html">
+                            <p>Candidates</p>
+                        </a></li>
+                    <li><a href="/admin/voters.html">
+                            <p>Voters</p>
+                        </a></li>
+                    <li><a href="/index.html">
+                            <p>Logout</p>
+                        </a></li>
+                    <li><a class="lidin" href="#">Admin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#"><span id="candreg">Register New Candidate</span></a></li>
+                    <li<a class="cand" target="_blank" href="#">All Candidates</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="form-title text-center">
+        <h4 class="text-dark">New Candidate Registration Form</h4>
+        <h6 class="text-light">Use the below form to register a new candidate contesting in elections</h6>
+    </div>
+    <div class="cnt">
+        <form id="update_user" method="POST" action="/">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="number" class="text-light">Candidate ID</label>
+                    <input type="number" name="candidate id" value="" placeholder="123456">
+                </div>
+                <div class="form-group">
+                    <label for="name" class="text-light">Name</label>
+                    <input type="hidden" name="id" value="">
+                    <input type="text" name="name" value="" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-light">Gmail</label>
+                    <input type="text" name="email" value="" placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="text-light">Gender</label>
+                    <div class="radio inline">
+                        <label>
+                            <input class="with-gap" type="radio" id="male" name="gender" value="Male">
+                            <span>Male</span>
+                        </label>
+                    </div>
+                    <div class="radio inline">
+                        <!-- <input type="radio" id="female" name="gender" value="Female">
+                    <label for="gender"class="text-light">Female</label> -->
+                        <label>
+                            <input class="with-gap" name="gender" value="Female" type="radio" />
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="text-light">Party Name</label>
+                    <input type="text" name="name" value="" placeholder="Party Name">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="foot footer-transparent d-print-none">
+        <div class="container">Copyright &copy; 2021 E-voting System. All rights reserved.</div>
+    </footer>
+    </div>
+    </div>
+    <!-- <script src="/js/scripts.js"></script> -->
+</body>
+
+</html>
