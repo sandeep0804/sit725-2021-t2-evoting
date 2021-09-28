@@ -6,11 +6,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Login | Voter | E-voting System</title>
+  <title>Login | E-voting System</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="/css/login1.css" rel="stylesheet" />
-  <link href="/css/voter.css" rel="stylesheet" />
+  <link href="/css/index.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,37 +20,39 @@
         <a href="#" class="brand-logo"><img class="user-image-size" src="/img/logo.png" /></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/index.html">
-              <p>Home</p>
+              <h6>Home</h6>
             </a></li>
         </ul>
       </div>
     </div>
   </nav>
-
   <div class="mid">
     <div class="wdmid">
-      <h6>Admin Login</h6>
       <div class="row">
-        <form class="col s12" action="/admin/" method="GET">
+        <form class="col s12" onsubmit="handleLogin(event)">
+          <h5>Admin Login</h6>
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label class="active" for="email">Email</label>
+              <input id="username" type="text" class="validate" placeholder="admin" required>
+              <label class="active" for="tet">Username</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
+              <input id="password" type="password" class="validate" placeholder="••••••••••" required>
               <label class="active" for="password">Password</label>
             </div>
           </div>
           <div class="tmid">
-            <a type="submit" class="waves-effect waves-light btn" href="/admin/">login</a>
+            <button type="submit" class="btn">Log In</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+<footer class="foot">
+  <div class="container">Copyright &copy; 2021 E-voting System. All rights reserved.</div>
+</footer>
+<script src="/js/login.js"></script>
 </body>
-
 </html>
