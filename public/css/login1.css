@@ -6,7 +6,6 @@ body {
 .mid {
   margin-top: 15vh;
   margin-left: 75vh;
-  /* margin-right: 10vh; */
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -31,19 +30,27 @@ body {
   background-color: #1565c0;
 }
 
-.rg a {
-  margin-right: 10px;
-}
-
-.imc {
-  margin-left: 10vh;
-  margin-bottom: 3vh;
-}
-
-h6 {
+h5 {
   text-decoration: none !important;
   font-weight: 600;
   color: black !important;
   padding-left: 50px;
   padding-bottom: 15px;
+}
+
+h6 {
+  text-decoration: none !important;
+  color: bisque !important;
+  cursor: pointer;
+}
+
+h6:hover {
+  text-decoration: none !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.foot {
+  margin-top: 75vh;
+  margin-left: 55vh;
 }
