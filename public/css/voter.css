@@ -43,9 +43,6 @@ nav {
   background-color: #1565c0;
 }
 .elet {
-  /* background-color: #24a0ed;
-  margin-left: 160vh;
-  padding: 5px; */
   text-decoration: none !important;
   border-radius: 5px;
   padding: 7px 20px;
@@ -61,13 +58,13 @@ nav {
   background-color: #1565c0;
 }
 
-p {
+h6 {
   text-decoration: none !important;
   color: bisque !important;
   cursor: pointer;
 }
 
-p:hover {
+h6:hover {
   text-decoration: none !important;
   color: white !important;
   cursor: pointer;
