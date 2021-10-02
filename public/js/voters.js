@@ -74,3 +74,48 @@ function getTableEmptyRow() {
     </tr>
   `;
 }
+
+/**
+ * handle-Changing status of the voter
+ */
+ function handleChangeVoterStatus(event, voterId) {
+  fetch(`/api/voters/${voterId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      status: +event.target.value,
+    }),
+  })
+    .then((res) => res.json())
+    .then(() => {
+      getVoters();
+    })
+    .catch((ex) => {
+      toast.error(ex.message);
+    });
+}
+
+/**
+ * Handle-Voter deletion
+ */
+async function handleDeleteVoter(voterId) {
+  const { isConfirmed } = await promptDelete('Delete Voter');
+  if (isConfirmed) {
+    fetch(`/api/voters/${voterId}`, {
+      method: 'DELETE',
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          toast.error(data.error);
+        } else {
+          toast.success('Voter deleted');
+          getVoters();
+        }
+      })
+      
+      });
+  }
+}
