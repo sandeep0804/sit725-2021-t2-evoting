@@ -35,3 +35,41 @@
        table.innerHTML = getTableEmptyRow();
      }
    }
+
+   /**
+ * To get details of particular row in a Table 
+ */
+function getTableRow(data, index) {
+  const getSelectedOption = (value) => (value === data.status ? ' selected' : '');
+
+  return `
+    <tr>
+      <td>${index + 1}</td>
+      <td>${data.studentId}</td>
+      <td>${data.firstName} ${data.lastName}</td>
+      <td>${data.email}</td>
+      <td>${new Date(data.createdAt).toLocaleString()}</td>
+      <td>
+        <div class="table__actions">
+          <select class="form__control" onchange="handleChangeVoterStatus(event, '${data._id}')">
+            <option value="0"${getSelectedOption(0)}>Pending</option>
+            <option value="1"${getSelectedOption(1)}>Approved</option>
+            <option value="-1"${getSelectedOption(-1)}>Rejected</option>
+          </select>
+          <button type="button" class="btn btn--link" onclick="handleDeleteVoter('${data._id}')">Delete</button>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+/**
+ * Empty row from Table 
+ */
+function getTableEmptyRow() {
+  return `
+    <tr>
+      <td colspan="6" class="text-muted text-center">No voters available</td>
+    </tr>
+  `;
+}
