@@ -1,103 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Candidates | E-voting System</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link href="/css/voter.css" rel="stylesheet" />
-  </head>
-  <body>  
-    <nav class="nav-extended">
-      <div class="sp">
-        <div class="nav-wrapper navbar-size">
-          <a href="#" class="brand-logo"><img class="user-image-size" src="/img/logo.png" /></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/admin/index.html">
-                <p>Dashboard</p>
-              </a></li>
-            <li><a href="/admin/elections.html">
-                  <p>Elections</p>
-                </a></li>
-            <li><a href="/admin/candidates.html">
-                <p>Candidates</p>
-              </a></li>
-            <li><a href="/admin/voters.html">
-                <p>Voters</p>
-              </a></li>
-            <li><a href="/index.html">
-                <p>Logout</p>
-              </a></li>
-            <li><a class="lidin" href="#">Admin</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-content">
-          <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#"><span>Candidates</span></a></li>
-            <li<a class="cand" target="_blank" href="#">New Candidates</a></li>
-          </ul>
-        </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Candidates | E-voting System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/voter.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="nav-extended">
+    <div class="sp">
+      <div class="nav-wrapper navbar-size">
+        <a href="#" class="brand-logo"><img class="user-image-size" src="/img/logo.png" /><span class="evt">E-voting
+            System</span></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/admin/index.html">
+              <h6>Dashboard</h6>
+            </a></li>
+          <li><a href="/admin/elections.html">
+              <h6>Elections</h6>
+            </a></li>
+          <li><a href="/admin/candidates.html">
+              <h6>Candidates</h6>
+            </a></li>
+          <li><a href="/admin/voters.html">
+              <h6>Voters</h6>
+            </a></li>
+          <li><a href="/admin/votes.html">
+              <h6>Votes</h6>
+            </a></li>
+          <li><a href="/index.html">
+              <h6>Logout</h6>
+            </a></li>
+          <li><a class="lidin" href="#">Admin</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-          <div class="page-body">
-          <div class="container-xl">
-            <div class="row row-cards">
-              <div class="col-12">
-                <div class="card">
-                  <div class="table-responsive">
-                    <table class="table table-vcenter card-table">
-                      <thead>
-                        <tr>
-                          <th>Candidate ID</th>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Gender</th>
-                          <th class="w-1"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>210001</td>
-                          <td>Robert Downey Jr.</td>
-                          <td>robert@mit.edu.com</td>
-                          <td>Male</td>
-                          <td>
-                            <a href="javascript:void(0)">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>210002</td>
-                          <td>Chris Evans</td>
-                          <td>steve@mit.edu.com</td>
-                          <td>Male</td>
-                          <td>
-                            <a href="javascript:void(0)">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>210003</td>
-                          <td>Scarlett Johanssen</td>
-                          <td>scarlett@mit.edu.com</td>
-                          <td>Female</td>
-                          <td>
-                            <a href="javascript:void(0)">Edit</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="foot footer-transparent d-print-none">
-          <div class="container">Copyright &copy; 2021 E-voting System. All rights reserved.</div>
-        </footer>
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a href="#"><span>Candidates</span></a></li>
+          <li><button class="cand btn btn--primary mb-3" onclick="modal('modalNewCandidate').open()">New
+              Candidate</button></li>
+        </ul>
       </div>
     </div>
-    <script src="/js/scripts.js"></script>
-  </body>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Party</th>
+              <th>Election</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableCandidates">
+            <tr>
+            <td colspan="5" class="text-muted text-center">Candidates information display's here from the database</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="modalNewCandidate" class="modal">
+    <div class="modal__dialog">
+      <form class="max-w-xs modal__content" onsubmit="handleNewCandidate(event)">
+        <div class="modal__header">
+          <h5 class="modal__title">New Candidate</h5>
+          <button type="button" class="modal__btn-close" onclick="modal('modalNewCandidate').close()"></button>
+        </div>
+        <div class="modal__body">
+          <div class="mb-3">
+            <label class="form__label">First Name</label>
+            <input type="text" id="firstName" class="form__control" placeholder="Lucifer" required />
+          </div>
+          <div class="mb-3">
+            <label class="form__label">Last Name</label>
+            <input type="text" id="lastName" class="form__control" placeholder="Morningstar" required />
+          </div>
+          <div class="mb-3">
+            <label class="form__label">Party</label>
+            <input type="text" id="party" class="form__control" placeholder="Student's Party" required />
+          </div>
+          <div class="mb-3">
+            <label class="form__label">Election</label>
+            <select id="listElections" class="form__control" required>
+              <option value="">List of Elections</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button type="submit" class="btn btn--primary">Add Candidate</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p class="text-muted">&copy; 2021 E-voting System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/candidates.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
 </html>
