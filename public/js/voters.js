@@ -115,7 +115,8 @@ async function handleDeleteVoter(voterId) {
           getVoters();
         }
       })
-      
+       .catch((ex) => {
+        toast.error(ex.message);
       });
   }
 }
