@@ -57,11 +57,6 @@ nav {
   font-weight: 600;
   cursor: pointer;
 }
-span {
-  text-decoration: none !important;
-  font-weight: 600;
-  color: white !important;
-}
 .elet:hover {
   background-color: #1565c0;
 }
@@ -108,6 +103,10 @@ p:hover {
   cursor: pointer;
 }
 
+.cand:hover {
+  background-color: #1565c0;
+}
+
 .tab {
   margin-left: 50vh;
   margin-right: 50vh;
@@ -116,3 +115,36 @@ p:hover {
 .evt {
   margin-left: 15px;
 }
+
+.head {
+  background-color: hsl(214, 33%, 4%);
+  color: white;
+}
+
+.update {
+  background-color: black;
+}
+
+.update:hover {
+  background-color: gray;
+}
+
+.tabl {
+  margin-left: 40vh;
+  margin-right: 40vh;
+}
+
+.cnt {
+  margin-left: 40vh;
+  margin-right: 40vh;
+}
+
+.text-center {
+  margin-left: 65vh;
+  margin-bottom: 5em;
+}
+
+.btcl {
+  color: black;
+}
+
