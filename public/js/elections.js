@@ -18,7 +18,7 @@
  }
  
  /**
-  *  Table with election details
+  *  Table of election details
   */
  function populateTable(data) {
    const table = document.getElementById('tableElections');
