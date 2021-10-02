@@ -63,6 +63,7 @@ function getTableRow(data, index) {
   `;
 }
 
+
 /**
  * Empty row from Table 
  */
