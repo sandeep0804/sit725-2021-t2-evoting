@@ -1,11 +1,7 @@
-
- /* Global variables */
 let elections = [];
-
 
 /* Run on page load */
 getElections();
-
 
 /* Get all candidates */
 function getCandidates() {
@@ -35,7 +31,6 @@ function getElections() {
     });
 }
 
-
 /* Populate table */
 function populateTable(data) {
   const table = document.getElementById('tableCandidates');
@@ -60,7 +55,6 @@ function populateDropdownList(data) {
   }
 }
 
-
 /* Table row template */
 function getTableRow(data, index) {
   return `
@@ -81,7 +75,6 @@ function getTableRow(data, index) {
     </tr>
   `;
 }
-
 
 /* Get dropdown list */
 function getElectionOptions(electionId) {
