@@ -65,3 +65,90 @@ function getTableRow(data, index) {
       </tr>
     `;
   }
+<<<<<<< HEAD
+
+  /**
+ * Handle for changing election status
+ */
+function handleChangeElectionStatus(event, electionId) {
+    fetch(`/api/elections/${electionId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        status: +event.target.value,
+      }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        getElections();
+      })
+      .catch((ex) => {
+        toast.error(ex.message);
+      });
+  }
+  
+  /**
+   * Handle for deletion election status
+   */
+  async function handleDeleteElection(electionId) {
+    const { isConfirmed } = await promptDelete('Delete Election');
+    if (isConfirmed) {
+      fetch(`/api/elections/${electionId}`, {
+        method: 'DELETE',
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) {
+            toast.error(data.error);
+          } else {
+            toast.success('Election deleted');
+            getElections();
+          }
+        })
+        .catch((ex) => {
+          toast.error(ex.message);
+        });
+    }
+  }
+  
+  /**
+   * Handle for adding new election status
+   */
+  function handleNewElection(event) {
+    // Prevent reloading the page
+    event.preventDefault();
+  
+    // Send a POST request to the server
+    fetch('/api/elections', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: event.target.name.value,
+        date: event.target.date.value,
+        status: +event.target.status.value,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          toast.error(data.error);
+        } else {
+          modal('modalNewElection').close();
+          toast.success('Election added');
+          getElections();
+        }
+      })
+      .catch((ex) => {
+        toast.error(ex.message);
+      })
+      .finally(() => {
+        event.target.reset();
+      });
+  }
+  
+=======
+>>>>>>> c2eb37a41c4c058f8251d8b593dd77cf71b49354
