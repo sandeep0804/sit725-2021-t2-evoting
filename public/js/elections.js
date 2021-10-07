@@ -65,7 +65,6 @@ function getTableRow(data, index) {
       </tr>
     `;
   }
-<<<<<<< HEAD
 
   /**
  * Handle for changing election status
@@ -150,5 +149,3 @@ function handleChangeElectionStatus(event, electionId) {
       });
   }
   
-=======
->>>>>>> c2eb37a41c4c058f8251d8b593dd77cf71b49354
