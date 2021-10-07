@@ -31,6 +31,11 @@ exports.deleteOne = (req, res) => {
   votersServices.deleteOne(ObjectId(id), res);
 };
 
+// Delete all voters
+exports.deleteAll = (req, res) => {
+    votersServices.deleteAll(res);
+  };
+
 // voters Login
 exports.login = (req, res) => {
   const { body } = req;
