@@ -48,3 +48,34 @@ function initTabs() {
     };
   });
 }
+
+/**
+ * Toast
+ */
+ const toastOptions = {
+  padding: '0.75rem',
+  position: 'bottom-end',
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: true,
+  toast: true,
+  width: 320,
+};
+const toast = {
+  error: (message, ...options) => {
+    Swal.fire({
+      icon: 'error',
+      title: message,
+      ...toastOptions,
+      ...options,
+    });
+  },
+  success: (message, ...options) => {
+    Swal.fire({
+      icon: 'success',
+      title: message,
+      ...toastOptions,
+      ...options,
+    });
+  },
+};
