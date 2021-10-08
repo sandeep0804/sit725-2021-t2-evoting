@@ -3,6 +3,32 @@ Run on page load
  */
 initTabs();
 
+/**
+ * Chart
+ */
+ function createBarChart({ selector, label, labels, data }) {
+  const ctx = document.getElementById(selector).getContext('2d');
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: label,
+          data: data,
+          backgroundColor: 'rgba(207, 100, 28, 0.4)',
+          borderColor: 'rgba(207, 100, 28, 0.4)',
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      indexAxis: 'y',
+    },
+  });
+  return chart;
+}
+
 /*
 Modals
  */
