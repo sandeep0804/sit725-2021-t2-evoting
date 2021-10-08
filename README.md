@@ -1,12 +1,16 @@
 # sit725-2021-t2-evoting
 E-Voting System
+
 This application is about e-voting for university student elctions.
 
 This application contains two login interface one is for admin and another one is for voter.
 
 • Admin can register candidates to parcipate in the elections.
+
 • Admin can view  election results, votes received by each candidate.
+
 • Admin can view voters and can accept or reject the registered voters.
+
 • Approved voters by admin can view candidates contesting in elections can cast their vote.
 
 
@@ -24,6 +28,9 @@ Follow the below steps to run the application
 This is a public repository 
 
 Copyright (c) 2021 Sandeep Vattipalli
-Copyright (c) 2021 poojith Reddy Kondom
+
+Copyright (c) 2021 Poojith Reddy Kondam
+
 Copyright (c) 2021 Satvika Reddy Maddu 
+
 Copyright (c) 2021 Nitin Singh
