@@ -66,44 +66,28 @@ span {
   background-color: #1565c0;
 }
 
-p {
+h4 {
   text-decoration: none !important;
   color: bisque !important;
   cursor: pointer;
-  /* text-decoration: none !important;
-  border-radius: 10px;
-  padding: 2px 2px;
-  float: right;
-  color: bisque !important;
-  background: cornflowerblue;
-  font-weight: 500;
-  cursor: pointer; */
+  margin-left: 70em; 
 }
 
-p:hover {
+h4:hover {
   text-decoration: none !important;
   color: white !important;
-  cursor: pointer;
-  /* background-color: #1565c0; */
+  cursor: pointer; 
 }
 
-.ht {
-  margin-right: 55px;
+a {
+  text-decoration: none;  
 }
 
-.footer {
-  margin-top: 45vh;
-  margin-left: 77vh;
-}
 .sp {
   margin-left: 30px;
   margin-right: 30px;
 }
 
-.foot {
-  margin-top: 45vh;
-  margin-left: 55vh;
-}
 .cand {
   text-decoration: none !important;
   border-radius: 5px;
@@ -115,11 +99,6 @@ p:hover {
   background: cornflowerblue;
   font-weight: 600;
   cursor: pointer;
-}
-
-.tab {
-  margin-left: 50vh;
-  margin-right: 50vh;
 }
 
 .evt {
