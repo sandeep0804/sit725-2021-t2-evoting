@@ -12,5 +12,5 @@ client.connect((err) => {
 
 module.exports = {
   client: client,
-  databaseName: 'deakin-evoting',
+  databaseName: 'evoting',
 };
