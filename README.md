@@ -1,11 +1,11 @@
 # sit725-2021-t2-evoting
-E-Voting System
+E-VOTING SYSTEM
 
-This application is about e-voting for university student elctions.
+This application is about e-voting for university student elections.
 
-This application contains two login interface one is for admin and another one is for voter.
+This application contains two login interfaces one is for admin and another one is for voter.
 
-• Admin can register candidates to parcipate in the elections.
+• Admin can add new elections and Admin can register candidates to participate in the elections.
 
 • Admin can view  election results, votes received by each candidate.
 
@@ -15,13 +15,13 @@ This application contains two login interface one is for admin and another one i
 
 
 # Run the application
-Use visual studio to run the application.
+
 Follow the below steps to run the application
-1. Clone the github repository into your local system.
-2. Open repo using visual stidio code.
-3. run 'npm install' to install dependencies
+1. Open visual studio code in your local system.
+2. Clone the repository in visual studio code using 'git clone' command.
+3. run 'npm install' to install dependencies.
 4. run 'npm start' to start the application.
-5. Now open localhost:3000 in your web browser.
+5. Now open localhost:3000 in your web browser to start the application.
 
 
 # Copyrights
